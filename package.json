@@ -5,9 +5,10 @@
   "main": "app.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack",
     "dev:server": "nodemon --config nodemon.json server/app.js",
     "dev:client": "webpack serve --mode development",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev": "npm run build:dev && concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "clean:cache": "rimraf node_modules/.cache",
     "clean:static": "del-cli \"server/static/**/*\" \"!server/static/.gitkeep\"",
     "dev:clean": "npm run clean:static && npm run dev"

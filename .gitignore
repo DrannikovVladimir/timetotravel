@@ -2,3 +2,4 @@ node_modules
 static
 server/static
 server/.env
+.env

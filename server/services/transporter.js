@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-const dotEnv = require('dotenv');
 const { API_EMAIL, API_PASS, API_HOST  } = require('../config');
 
 const createTransporter = () => {
@@ -8,12 +7,12 @@ const createTransporter = () => {
   }
 
   return nodemailer.createTransport({
-    host: process.env.API_HOST,
+    host: API_HOST,
     port: 465,
     secure: true,
     auth: {
-      user: process.env.API_EMAIL,
-      pass: process.env.API_PASS,
+      user: API_EMAIL,
+      pass: API_PASS,
     },
   });
 };

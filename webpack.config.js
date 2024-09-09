@@ -205,12 +205,15 @@ module.exports = {
     ] : [],
   },
   devServer: {
-    static: path.join(__dirname, 'server/static'),
+    static: {
+      directory: path.join(__dirname, 'server/static'),
+    },
     compress: true,
     port: 8080,
     hot: true,
-    proxy: {
-      '/api': 'http://localhost:3000'
-    }
+    proxy: [{
+      context: ['/api'],
+      target: 'http://localhost:3000',
+    }]
   },
 };

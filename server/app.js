@@ -14,7 +14,7 @@ function createApp() {
   const app = express();
 
   // Путь к клиентским файлам (предполагается, что клиентский проект находится на уровень выше)
-  const clientPath = path.join(__dirname, '../tmtl/src');
+  const clientPath = path.join(__dirname, '..client/src');
 
   // Настройка middleware
   app.use(express.static(clientPath)); // Обслуживание клиентских файлов
@@ -49,22 +49,3 @@ const app = createApp();
 app.listen(PORT, () => {
   console.log(`Сервер запущен на порту ${PORT}`);
 });
-
-// Добавляем поддержку горячей перезагрузки для разработки
-if (process.env.NODE_ENV === 'development') {
-  const livereload = require('livereload');
-  const connectLivereload = require('connect-livereload');
-  
-  const liveReloadServer = livereload.createServer();
-  liveReloadServer.watch(path.join(__dirname, '../tmtl/src'));
-
-  // Добавляем скрипт livereload на страницу
-  app.use(connectLivereload());
-
-  // Триггер перезагрузки браузера при изменении серверных файлов
-  liveReloadServer.server.once("connection", () => {
-    setTimeout(() => {
-      liveReloadServer.refresh("/");
-    }, 100);
-  });
-}
