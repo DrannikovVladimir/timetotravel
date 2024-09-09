@@ -1,0 +1,40 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.socials--footer {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.socials__item {
+  position: relative;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+
+    z-index: -1;
+  }
+}
+
+.socials__item--footer {
+  width: 35px;
+  height: 35px;
+}
+

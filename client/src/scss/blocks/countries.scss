@@ -1,0 +1,121 @@
+.countries {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0 20px;
+
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0 0 3px $border-color;
+}
+
+.countries--feedback {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  padding: 0;
+  box-shadow:  none;
+}
+
+.countries__item {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.countries__item--feedback {
+  border-bottom: none;
+}
+
+.countries__item-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: none;
+  text-align: left;
+  color: #02979a;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.countries__item-title--feedback {
+  color: $bg-color;
+}
+
+.countries__item-link {
+  min-width: 200px;
+  margin-right: 220px;
+}
+
+.countries__item-link--feedback {
+  min-width: auto;
+  margin-right: 30px;
+}
+
+.countries-list__links {
+  display: flex;
+  justify-content: flex-end;
+  width: 195px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.countries-list__links-item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 5px;
+  }
+}
+
+.countries-list__links-item__link {
+  color: #02979a;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.countries-list__links-item__link--orange {
+  color: $basic-color;
+}
+
+@media (max-width: 960px) {
+  .countries__item-link {
+    min-width: 180px;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .countries__item {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countries__item-link {
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 429px) {
+  .countries-list__links-item__link--resorts {
+    display: none;
+  }
+
+  .countries-list__links-item {
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.promo {
+  margin-top: -103px;
+  background-image: url('@/img/icon-bg-promo-right.svg'),
+    url('@/img/icon-bg-promo-left.svg');
+  background-repeat: no-repeat;
+  background-position: top 50px right -100px,
+    top -350px left -200px;
+}
+
+.promo__container {
+  width: 1440px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-right: 40px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+
+  background-image: url('@/img/bg-promo-girl.webp'),
+    url('@/img/icon-bg-promo-center.svg'),
+    url('@/img/icon-bg-promo-compass.svg');
+  background-repeat: no-repeat;
+  background-position: top 100px right,
+    top 100px right,
+    top 450px left 80px;
+}
+
+.promo__title {
+  width: 630px;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-left: 230px;
+  padding: 0;
+  font-weight: 900;
+  font-size: 65px;
+  line-height: 70px;
+  color: $title-color;
+  text-transform: uppercase;
+}
+
+.promo__subtitle {
+  margin: 0;
+  margin-left: 230px;
+  margin-bottom: 35px;
+  bottom: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $title-color;
+}
+
+.promo__button {
+  box-sizing: border-box;
+  width: 225px;
+  height: 44px;
+  margin-left: 230px;
+  padding: 13px 50px;
+  border: none;
+  border-radius: 4px;
+
+  background-color: $basic-color;
+  color: $bg-color;
+
+  transition: 0.2s linear;
+
+  &:hover {
+    background-color: $basic-color;
+  }
+
+  &:active {
+    color: $basic-color;
+  }
+}
+
+.promo__button--flight {
+  margin-left: 20px;
+  border: 2px solid $basic-color;
+  padding: 11px 48px;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  color: $basic-color;
+  font-weight: 500;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px;
+
+  &:hover {
+    border-color: lighten($color: $basic-color, $amount: 10);
+    background-color: $bg-color;
+  }
+
+  &:active {
+    color: $bg-color;
+  }
+}
+
+.promo__button-arrow {
+  margin-right: 3px;
+  // animation-duration: 1s;
+  // animation-name: shift;
+  // animation-iteration-count: infinite;
+}
+
+.promo__button-telegram {
+  margin-right: 3px;
+}
+
+.promo__tours {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1440px) {
+  .promo__container {
+    width: auto;
+  }
+}
+
+@media (max-width: 1330px) {
+  .promo__title {
+    margin-left: 130px;
+  }
+
+  .promo__subtitle {
+    margin-left: 130px;
+  }
+
+  .promo__button {
+    margin-left: 130px;
+  }
+
+  .promo__button--flight {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .promo__tours {
+    width: auto;
+  }
+  
+  .promo__title {
+    margin-left: 60px;
+  }
+
+  .promo__subtitle {
+    margin-left: 60px;
+  }
+
+  .promo__button {
+    margin-left: 60px;
+  }
+
+  .promo__button--flight {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1010px) {
+  .promo__title {
+    margin-left: 0;
+  }
+
+  .promo__subtitle {
+    margin-left: 0;
+  }
+
+  .promo__button {
+    margin-left: 0;
+  }
+
+  .promo__button--flight {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 930px) {
+  .promo {
+    margin-top: -78px;
+  }
+}
+
+@media (max-width: 800px) {
+  .promo__container {  
+    background-image: url('@/img/bg-promo-girl.webp'),
+      url('@/img/icon-bg-promo-center.svg'),
+      url('@/img/icon-bg-promo-compass.svg');
+    background-size: 200px auto;
+    background-position: top 250px right,
+      top 100px right,
+      top 450px left 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .promo__container {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background-image: url('@/img/bg-promo-girl.webp'),
+      url('@/img/icon-bg-promo-center.svg'),
+      url('@/img/icon-bg-promo-compass.svg');
+    background-size: 200px auto;
+    background-position: top 180px right,
+      top 100px right,
+      top 450px left 80px;
+  }
+  
+  .promo__title {
+    width: 320px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .promo__subtitle {
+    width: 280px;
+  }
+
+  .promo__button {
+    min-width: 160px;
+    padding: 12px 15px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .promo__button--flight {
+    margin-left: 10px;
+    padding: 10px 13px;
+  }
+}
+
+@media (max-width: 550px) {
+  .promo {
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 520px) {
+  .promo__container {
+    padding-top: 160px;
+
+    background-image: url('@/img/bg-promo-girl.webp'),
+      url('@/img/icon-bg-promo-center.svg'),
+      url('@/img/icon-bg-promo-compass.svg');
+    background-size: 200px auto;
+    background-position: top 260px right -40px,
+      top 100px right,
+      top 450px left 80px;
+  }
+
+  
+}

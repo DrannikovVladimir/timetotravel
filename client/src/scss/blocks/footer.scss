@@ -1,0 +1,132 @@
+.footer {
+  position: relative;
+
+  color: $bg-color;
+
+  background-color: #024679;
+}
+
+.footer__container {
+  position: relative;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__block-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.footer__block-list__item-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.footer__address {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.footer__copy {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.footer__partners {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1280px) {
+  .footer__container {
+    width: auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footer__container {
+    padding-left: 20px;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+  }
+
+  .footer__block-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .footer__block-list__item {
+    margin-bottom: 40px;
+  }
+
+  .footer__block-list__item--logo {
+    order: 5;
+  }
+
+  .footer__block-list__item--tours {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  .footer__block-list__item--menu {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  .footer__block-list__item--contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  .footer__address {
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer__block-list__item--tours {
+    padding-left: 35px;
+  }
+
+  .footer__block-list__item--menu {
+    padding-left: 35px;
+  }
+
+  .footer__block-list__item--logo {
+    padding-left: 35px;
+  }
+}
+

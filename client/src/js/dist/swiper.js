@@ -1,0 +1,1 @@
+"use strict";var swiper1=new Swiper(".hot-tours__slider",{direction:"horizontal",autoHeight:!0,loop:!0,autoplay:{delay:2e4},effect:"fade",fadeEffect:{crossFade:!0},navigation:{nextEl:".hot-tours__slider-button--next",prevEl:".hot-tours__slider-button--prev"},pagination:{el:".swiper-pagination"}});
